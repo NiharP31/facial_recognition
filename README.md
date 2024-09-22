@@ -113,7 +113,7 @@ The project includes a `main.py` file that allows you to run the entire pipeline
 ## Logging and Visualization
 
 This project uses TensorBoard for logging and visualization. To view the logs, run:  
-    ```bash
+    ```
     tensorboard --logdir=logs
     ```  
 
