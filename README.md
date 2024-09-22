@@ -30,37 +30,79 @@ facial_recognition_project/
 
 ## Setup
 
-1. Clone the repository:
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/yourusername/facial_recognition_project.git  
+    cd facial_recognition_project
+    ```
 
-git clone https://github.com/yourusername/facial_recognition_project.git  
-cd facial_recognition_project
+2. **Create a virtual environment and activate it**:  
+    ```bash
+    conda create -n env_name
+    conda activate env_name  
+    ```
 
-2. Create a virtual environment and activate it:  
-
-conda activate env  
-
-3. Install the required dependencies:  
-
-pip install -r requirements.txt OR Conda install -r requirements.txt  
+3. **Install the required dependencies**:  
+    ```bash
+    pip install -r requirements.txt   
+    ```
+    or
+    ```bash
+    Conda install -r requirements.txt
+    ```
 
 ## Usage
 
-1. Download and prepare the dataset:
+The project includes a `main.py` file that allows you to run the entire pipeline or specific parts of it using command-line arguments.
 
-python scripts/download_dataset.py  
+1. **To run the entire pipeline**:
+    ```bash
+    python main.py --all
+    ```
+    This command will download the dataset, preprocess the images, generate embeddings, train the SVM classifier, and evaluate the model.
 
-2. Run the entire pipeline:  
+2. **To run specific parts of the pipeline, you can use the following arguments**:
 
-python scripts/run_pipeline.py
+   - Download and prepare the dataset:
+     ```bash
+     python main.py --download
+     ```
 
-This script will preprocess the images, generate embeddings, train the SVM classifier, and evaluate the model.
+   - Preprocess the images:
+     ```bash
+     python main.py --preprocess
+     ```
 
-3. To evaluate the model on new images, use:  
+   - Generate embeddings:
+     ```bash
+     python main.py --embeddings
+     ```
 
-python src/evaluate.py  
+   - Train the SVM classifier:
+     ```bash
+     python main.py --train
+     ```
+
+   - Evaluate the model on test images:
+     ```bash
+     python main.py --evaluate
+     ```
+
+3. **You can also combine multiple steps**:
+    ```bash
+    python main.py --download --preprocess --embeddings
+    ```
+
+4. **For help and to see all available options**:
+    ```bash
+    python main.py --help
+    ```
+
+**Note**: Make sure you're in the project's root directory when running these commands.
 
 ## Components
 
+- `download_dataset.py`: Downloads and organizes the dataset.
 - `preprocess.py`: Handles face detection, alignment, and cropping.
 - `dataset.py`: Implements a custom PyTorch Dataset for the face images.
 - `model.py`: Defines the face embedding model (ResNet50).
@@ -68,17 +110,12 @@ python src/evaluate.py
 - `train.py`: Trains the SVM classifier on the generated embeddings.
 - `evaluate.py`: Evaluates the trained model on test images.
 
-## Testing
-
-Run the unit tests using:  
-
-python -m unittest discover tests  
-
 ## Logging and Visualization
 
 This project uses TensorBoard for logging and visualization. To view the logs, run:  
-
-tensorboard --logdir=logs  
+    ```bash
+    tensorboard --logdir=logs
+    ```  
 
 Then open a web browser and go to `http://localhost:6006`.
 
@@ -99,8 +136,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
+- Building a Facial Recognition Pipeline with Deep Learning in Tensorflow [LINK](https://hackernoon.com/building-a-facial-recognition-pipeline-with-deep-learning-in-tensorflow-66e7645015b8)
 - Labeled Faces in the Wild dataset
-- PyTorch and TorchVision libraries
-- scikit-learn library
-- face_recognition library
 
