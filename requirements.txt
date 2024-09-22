@@ -1,6 +1,12 @@
-conda -
-    torch
-    torchvision
-    numpy
-pip -
-    facial_recognition
+numpy
+opencv-python
+Pillow
+scikit-learn
+joblib
+torch
+torchvision
+tensorboard
+matplotlib
+seaborn
+tqdm
+face_recognition
