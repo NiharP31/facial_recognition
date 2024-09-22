@@ -1,0 +1,6 @@
+conda -
+    torch
+    torchvision
+    numpy
+pip -
+    facial_recognition
