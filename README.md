@@ -112,7 +112,7 @@ The project includes a `main.py` file that allows you to run the entire pipeline
 
 ## Logging and Visualization
 
-**This project uses TensorBoard for logging and visualization. To view the logs, run**:  
+This project uses TensorBoard for logging and visualization. To view the logs, run:  
     ``` 
     tensorboard --logdir=logs
     ```  
@@ -132,7 +132,7 @@ Contributions to this project are welcome. Please follow these steps:
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/NiharP31/facial_recognition/blob/main/LICENSE) file for details.
 
 ## Acknowledgments
 
