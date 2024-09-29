@@ -1,4 +1,4 @@
-# Facial Recognition Project
+# Facial Recognition System
 
 This project implements a facial recognition system using deep learning (Torch, Resnet50) and machine learning (SVM). It processes the Labeled Faces in the Wild (LFW) dataset, generates face embeddings using a pre-trained ResNet50 model, and trains an SVM classifier for face recognition.
 
